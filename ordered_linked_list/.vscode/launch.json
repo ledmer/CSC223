@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Ordered_List Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/ledmer/High_School/2024-2025/CSC223/ordered_linked_list/build/test_list",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build with Make",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "engineLogging": true
+            }
+        }
+    ]
+}
