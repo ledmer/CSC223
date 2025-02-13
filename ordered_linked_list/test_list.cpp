@@ -8,7 +8,14 @@ TEST_CASE("Test can create and render List Nodes") {
     Orderedlist<int> list;
     list.insert_item(1);
     list.insert_item(3);
-
+    list.insert_item(4);
+    list.insert_item(6);
+    list.insert_item(5);
+    list.insert_item(7);
+    list.insert_item(8);
+    list.insert_item(9);
+    list.insert_item(10);
+    list.insert_item(11);
 
 
 

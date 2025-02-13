@@ -77,28 +77,31 @@ public:
         T element_i = element_i_pointr->cargo;
         return element_i;
     }
+
     void insert_item(T carg){
         if (head == nullptr){
             insert_at_front(carg);
             return;
         } 
-        Node<T>* element_i_pointr = head;
-        if (element_i_pointr->cargo >= carg){
-            insert_at_front(carg);
-            return;
+
+        Node<T>* current = head;
+        Node<T>* previous = nullptr;
+
+        while (current != nullptr && current->cargo < carg) {
+            previous = current;
+            current = current->next;
         }
-        
-       int i = 2;
-        while (element_i_pointr->cargo >= carg)
-        {  
-            element_i_pointr = element_i_pointr->next;
-            i++;
+
+        Node<T>* new_node = new Node<T>(carg, current);
+
+        if (previous == nullptr) {
+            head = new_node;
+        } else {
+            previous->next = new_node;
         }
-        Node<T>* element_i = new Node<T>(carg, element_i_pointr->next);
-        element_i_pointr->next = element_i;
+
         num_nodes++;
     }
-
     T remove_item(int pos){
         if (pos > num_nodes)
             throw runtime_error("Item outside of list range");
