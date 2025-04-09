@@ -1,4 +1,3 @@
-# family_tree.rb
 
 class Person
     attr_accessor :name, :children
@@ -55,7 +54,7 @@ class Person
     end
   end
   
-  # -- Main Program --
+#main
   
   tree = FamilyTree.new("Alex")
   
